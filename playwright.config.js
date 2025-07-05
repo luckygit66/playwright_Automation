@@ -21,6 +21,7 @@ module.exports = defineConfig({
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
+  
 
  /* time a test should wait brfore reporting failure*/
  
@@ -41,6 +42,7 @@ module.exports = defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     //trace: 'on',
     trace: 'on-first-retry',
+    
   },
 
   /* Configure projects for major browsers */

@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "regression": "npx playwright test",
-    "webTests": "npx playwright test --grep \"@web\"",
-    "ApiTests": "npx playwright test --grep \"@API\""
+    "webTests": "npx playwright test --grep \"@web\" --headed --ui",
+    "ApiTests": "npx playwright test --grep \"@API\"",
+    "naukri": "npx playwright test tests/NaukriProfile.spec.js --headed",
+    "validations":"npx playwright test --grep \"@validations\"",
+    "aptest":"npx playwright test AutomationPractiseWebsiteTest.spec.js"
   },
   "keywords": [],
   "author": "",

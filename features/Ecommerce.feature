@@ -1,6 +1,6 @@
 Feature: Ecommerce Validations
 
-    @validations
+    @web
     Scenario: Placing The Order
         Given A login to Ecommerce application with "lucky8463@gmail.com" and "GetHigh@8463"
         When  Add "ADIDAS ORIGINAL" to cart

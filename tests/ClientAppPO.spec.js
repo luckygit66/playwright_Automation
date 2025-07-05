@@ -23,6 +23,7 @@ test.describe.serial(' Client App Login Tests', () => {
             const ordersHistoryPage = pomManager.getOrdersHistoryPage();
             await ordersHistoryPage.searchOrderAndSelect(orderId);
             expect(orderId.includes(await ordersHistoryPage.getOrderId())).toBeTruthy();
-        });
+        }
+    );
     }
 });

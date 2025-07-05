@@ -28,8 +28,6 @@ test('Browser Context - validate Error Login', async ({ page }) => {
     expect(productIsVisible).toBeTruthy();
     await page.locator("text=Checkout").click();
     await page.locator("[placeholder*='Country']").pressSequentially("ind");
-
-
     const CountryDropDown = await page.locator(".ta-results");
     await CountryDropDown.waitFor();
     const dropDownValueCount = await CountryDropDown.locator("button").count();

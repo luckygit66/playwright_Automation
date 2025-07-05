@@ -8,7 +8,7 @@ test('First Playwright test', async ({ page }) => {
   console.log(await page.title());
   await expect(page).toHaveTitle("LoginPage Practise | Rahul Shetty Academy")
 
-  await page.locator("#username").fill("rahulshetty");
+  await page.locator("#username").fill("rahulshettyacademy");
   await page.locator("[type='password']").fill("learning");
   await page.locator("#signInBtn").click();
   console.log(await page.locator("[style*='block']").textContent());

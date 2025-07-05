@@ -49,7 +49,7 @@ module.exports = defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] ,
-        headless : true,
+        headless : false,
         screenshot:'only-on-failure',
         trace: 'on-first-retry',
       },

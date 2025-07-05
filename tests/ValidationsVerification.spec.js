@@ -24,7 +24,7 @@ test('ScreenShot & visual Comparison',async({page})=>
   await expect(page.locator("#displayed-text")).toBeVisible();
   await page.locator('#displayed-text').screenshot({path:'PartialScreenshot.png'});
   await page.locator("#hide-textbox").click();
-  await page.screenshot({path:'screenshot.png'});//the path will create the screen shot of WHOLE PAGE and store the screenshot in you project 
+  await page.screenshot({path:'screenshot.png'});//the path will create the screen shot of WHOLE PAGE and store the screenshot in you project
   await expect(page.locator("#displayed-text")).toBeHidden();
 
 })
