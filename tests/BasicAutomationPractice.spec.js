@@ -63,7 +63,7 @@ await framesPage.locator("li a[href$='lifetime-access']:visible").click();
 await page.pause();//used here for testing purspose
 })
 
-test.only('MouseHover', async ({page})=>{
+test('MouseHover', async ({page})=>{
     await page.goto('https://rahulshettyacademy.com/AutomationPractice/');   
     await page.locator('#mousehover').hover(); 
 })

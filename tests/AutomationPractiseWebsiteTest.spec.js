@@ -77,7 +77,7 @@ test('Update the quantity and Add To Cart', async ({ page }) => {
     await expect(page.locator(".disabled")).toHaveText("2");
 });
 
-test.only('Update the quantity ', async ({ page }) => {
+test('Update the quantity ', async ({ page }) => {
     await page.goto('https://automationexercise.com/');
     expect(await page.title()).toContain(pageTitle);
     
