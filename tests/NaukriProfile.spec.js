@@ -33,12 +33,11 @@ test('naukri login', async ({ page }) => {
     //await page.locator("input[value='Update resume']").click();
     const fileInput = page.locator('input[type="file"]');
 
-    // await page.pause();
-    // Upload to the first one
+    
     await fileInput.nth(0).setInputFiles('D:/Lucky Resume/Lucky Singh.docx');
     //await page.pause();
     //expect(await page.locator("#attachCVMsgBox")).toContainText("Resume has been successfully uploaded.")
-    //     // OR upload to the second one
+    
     //    // await fileInputs.nth(1).setInputFiles('D:/Lucky Resume/Lucky Singh.docx');
     //     // await fileInput.setInputFiles('D:/Lucky Resume/Lucky Singh.docx');
     // await page.waitForTimeout(5000);
