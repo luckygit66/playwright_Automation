@@ -1,5 +1,8 @@
 name: Playwright Tests
 on:
+  schedule:
+    - cron: '0 3 * * *'   # Runs daily at 8:30 AM IST (3:00 AM UTC)
+    - cron: '30 7 * * *'  # Runs daily at 1:00 PM IST (7:30 AM UTC)
   push:
     branches: [ main, master ]
   pull_request:
@@ -18,7 +21,7 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test
+      run: npx playwright test tests/NaukriProfile.spec.js
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
