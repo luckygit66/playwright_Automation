@@ -95,7 +95,7 @@ test('naukri login harmeet', async ({ page }) => {
     const fileInput = page.locator('input[type="file"]');
 
 
-    await fileInput.nth(0).setInputFiles('D:/Harmeet Resume/Harmeet_Sansova_Data_Analyst_MIS_Reporting.pdf');
+    await fileInput.nth(0).setInputFiles('resumes/Harmeet_Sansova_Data_Analyst_MIS_Reporting.pdf');
     //await page.pause();
     //expect(await page.locator("#attachCVMsgBox")).toContainText("Resume has been successfully uploaded.")
 
