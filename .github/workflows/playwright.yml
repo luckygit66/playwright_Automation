@@ -12,6 +12,8 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.48.0-noble
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
@@ -20,18 +22,6 @@ jobs:
         cache: 'npm'
     - name: Install dependencies
       run: npm ci
-    - name: Cache Playwright browsers
-      uses: actions/cache@v4
-      id: playwright-cache
-      with:
-        path: ~/.cache/ms-playwright
-        key: ${{ runner.os }}-playwright-${{ hashFiles('package-lock.json') }}
-    - name: Install Playwright Browsers
-      if: steps.playwright-cache.outputs.cache-hit != 'true'
-      run: npx playwright install chromium --with-deps
-    - name: Install system deps (cache hit)
-      if: steps.playwright-cache.outputs.cache-hit == 'true'
-      run: npx playwright install-deps chromium
     - name: Run Playwright tests
       run: npx playwright test tests/NaukriProfile.spec.js
     - uses: actions/upload-artifact@v4
